@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Smart Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="8" fill="url(#gradient)"/>
+                    <path d="M20 10L28 16V24L20 30L12 24V16L20 10Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="0" y1="0" x2="40" y2="40">
+                            <stop offset="0%" stop-color="#667eea"/>
+                            <stop offset="100%" stop-color="#764ba2"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>Flask Dashboard</span>
+            </div>
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                <span>Live</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="welcome-section">
+                <h1 class="welcome-title">Welcome, Vineet 👋</h1>
+                <p class="welcome-subtitle">Your containerized Flask application is running smoothly</p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card time-card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-label">Current Time</h3>
+                        <p class="card-value" id="time">Loading...</p>
+                    </div>
+                </div>
+
+                <div class="card date-card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-label">Today's Date</h3>
+                        <p class="card-value" id="date">Loading...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quote-section">
+                <div class="quote-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+                    </svg>
+                </div>
+                <blockquote class="quote-text" id="quote">
+                    Loading inspirational quote...
+                </blockquote>
+                <button class="refresh-btn" onclick="fetchData()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="23 4 23 10 17 10"/>
+                        <polyline points="1 20 1 14 7 14"/>
+                        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                    </svg>
+                    New Quote
+                </button>
+            </div>
+
+            <div class="stats-section">
+                <div class="stat-item">
+                    <div class="stat-icon">🐳</div>
+                    <div class="stat-info">
+                        <p class="stat-label">Containerized</p>
+                        <p class="stat-value">Docker</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-info">
+                        <p class="stat-label">Framework</p>
+                        <p class="stat-value">Flask</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">🚀</div>
+                    <div class="stat-info">
+                        <p class="stat-label">Status</p>
+                        <p class="stat-value">Running</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">☁️</div>
+                    <div class="stat-info">
+                        <p class="stat-label">Deployment</p>
+                        <p class="stat-value">Multi-Cloud</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Built with ❤️ using Flask & Docker | Multi-Cloud Ready</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
