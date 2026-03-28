@@ -20,7 +20,6 @@ A modern, beautiful Flask web application with a stunning faint bluish UI that d
 - Glassmorphism design with backdrop blur effects
 - Smooth transitions and hover effects
 - Fully responsive for all screen sizes
-- Accessibility-friendly design
 
 ## 📁 Project Structure
 
