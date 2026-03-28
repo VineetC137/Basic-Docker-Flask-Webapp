@@ -255,4 +255,4 @@ Feel free to fork this project and submit pull requests for any improvements!
 
 ---
 
-**Built with ❤️ using Flask & Docker | Multi-Cloud Ready 🚀**
+**Built by Vineet Unde using Flask & Docker | Multi-Cloud Ready 🚀**
